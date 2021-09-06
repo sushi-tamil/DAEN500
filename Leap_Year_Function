@@ -1,0 +1,22 @@
+# Define your function here.
+def is_leap_year(user_year):
+    is_leap_year = True
+    if(user_year % 4) == 0:
+        if (user_year % 100) == 0:
+            if (user_year % 400) == 0:
+                is_leap_year = True
+            else:
+                is_leap_year = False
+        else:
+            is_leap_year = True
+    else:
+        is_leap_year = False
+    return is_leap_year
+
+if __name__ == '__main__':
+    # Type your code here. Your code must call the function.
+    input_year = int(input())
+    if is_leap_year(input_year) == True:
+        print(input_year, 'is a leap year.')
+    else:
+        print(input_year, 'is not a leap year.')
